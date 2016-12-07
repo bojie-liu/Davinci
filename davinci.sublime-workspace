@@ -3,6 +3,14 @@
 	{
 		"selected_items":
 		[
+			[
+				"Spark",
+				"SparkContext"
+			],
+			[
+				"Spa",
+				"SparkConf"
+			]
 		]
 	},
 	"buffers":
@@ -12,6 +20,15 @@
 			"settings":
 			{
 				"buffer_size": 156,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "core/predict.py",
+			"settings":
+			{
+				"buffer_size": 0,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -29,16 +46,24 @@
 			"file": "config.py",
 			"settings":
 			{
-				"buffer_size": 77,
+				"buffer_size": 219,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "log.py",
+			"file": "davinci.sublime-project",
 			"settings":
 			{
-				"buffer_size": 117,
+				"buffer_size": 247,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "utils/log.py",
+			"settings":
+			{
+				"buffer_size": 108,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -47,7 +72,7 @@
 			"file": "main.py",
 			"settings":
 			{
-				"buffer_size": 80,
+				"buffer_size": 241,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -135,10 +160,15 @@
 	},
 	"expanded_folders":
 	[
-		"/E/git/davinci"
+		"/E/git/davinci",
+		"/E/git/davinci/core",
+		"/E/git/davinci/io",
+		"/E/git/davinci/utils"
 	],
 	"file_history":
 	[
+		"/F/BaiduYunDownload/赛场一 数据集/gd_train_data.txt",
+		"/E/git/davinci/log.pyc",
 		"/C/Users/LBK/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
 		"/C/Users/LBK/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/C/Users/LBK/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
@@ -180,7 +210,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -196,7 +226,35 @@
 						"selection":
 						[
 							[
-								45,
+								53,
+								53
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "core/predict.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
 								0
 							]
 						],
@@ -208,11 +266,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "io/input.py",
 					"semi_transient": false,
 					"settings":
@@ -240,20 +298,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "config.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 77,
+						"buffer_size": 219,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								76,
-								76
+								203,
+								203
 							]
 						],
 						"settings":
@@ -265,16 +323,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "log.py",
-					"semi_transient": false,
+					"buffer": 4,
+					"file": "davinci.sublime-project",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 117,
+						"buffer_size": 247,
 						"regions":
 						{
 						},
@@ -287,31 +345,59 @@
 						],
 						"settings":
 						{
-							"auto_name": "",
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "main.py",
+					"buffer": 5,
+					"file": "utils/log.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 80,
+						"buffer_size": 108,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								80,
-								80
+								25,
+								25
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "main.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 241,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								241,
+								241
 							]
 						],
 						"settings":
@@ -326,7 +412,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "io/output.py",
 					"semi_transient": false,
 					"settings":
@@ -351,11 +437,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "/C/Users/LBK/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
 					"semi_transient": false,
 					"settings":
@@ -379,7 +465,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
