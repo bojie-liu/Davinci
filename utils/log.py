@@ -1,6 +1,6 @@
 
 
-_verbose = False
+_verbose = True
 
 def e(msg):
 	print(msg)

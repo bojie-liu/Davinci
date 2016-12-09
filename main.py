@@ -1,12 +1,16 @@
 
-import os
+import io.input
+import core
 import config
 from utils import log
 
-from pyspark import SparkConf, SparkContext
-
 if __name__ == "__main__":
-	log.e(os.sys.path)
-	conf = SparkConf().setMaster("local").setAppName("main")
-	sc = SparkContext(conf = conf)
-	log.e(sc)
+	training_set = io.input.read(r'E:\test.csv')
+	model = core.train_model(training_set)
+
+	test_set = io.input.read(r'E:\test.csv')
+	result = core.predict(model, test_set)
+	#io.plot(result)
+
+	print result
+	log.e(config.use_spark)
