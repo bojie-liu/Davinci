@@ -1,0 +1,2 @@
+中文wiki https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.bz2
+英文wiki https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2
