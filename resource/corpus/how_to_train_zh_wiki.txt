@@ -1,6 +1,15 @@
 Install python
 https://www.python.org/downloads/
 
+(optional)Install gcc
+brew install gcc
+
+(optional)Install blas & lapack
+	download lapcak
+http://www.netlib.org/lapack/
+	Linux下Lapack如何安装
+http://www.linuxdiyf.com/linux/14413.html
+
 Install gensim
 http://radimrehurek.com/gensim/install.html
 pip install --upgrade pip
