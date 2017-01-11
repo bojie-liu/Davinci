@@ -1,0 +1,37 @@
+Install python
+https://www.python.org/downloads/
+
+(optional)Install gcc
+brew install gcc
+
+(optional)Install blas & lapack
+	download lapcak
+http://www.netlib.org/lapack/
+	Linux下Lapack如何安装
+http://www.linuxdiyf.com/linux/14413.html
+
+Install gensim
+http://radimrehurek.com/gensim/install.html
+pip install --upgrade pip
+pip install numpy
+pip install scipy
+pip install gensim
+
+Install brew
+http://brew.sh
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Install translator OpenCC
+https://github.com/BYVoid/OpenCC
+brew install OpenCC
+
+Install jieba
+pip install jieba
+
+Train wiki
+python3 process_wiki.py zhwiki-latest-pages-articles.xml wiki.cn.text
+opencc -i wiki.cn.text -o wiki.cn.text.jian -c t2s.json
+python3 separate_words.py wiki.cn.text.jian wiki.cn.text.jian.seq 
+python3 remove_words.py wiki.cn.text.jian.seq wiki.cn.text.jian.removed
+python3 train_word2vec_model.py wiki.cn.text.jian.removed wiki.en.text.jian.model wiki.en.text.jian.vector
+
