@@ -4,10 +4,11 @@ class RegressorFactory(object):
     def __init__(self):
         pass
 
-    def create(type, input_col="input", output_col="output", *args):
-        if type == "GBT":
+    def create(regressor_type, input_col="input", output_col="output", *args):
+        if regressor_type == "GBT":
             return GBTRegressor(labelCol=input_col, featuresCol=output_col, maxIter=10)
-        elif type == "RF":
+        elif regressor_type == "RF":
             return RandomForestRegressor(labelCol=input_col, featuresCol=output_col)
         else:
             print("Invalid regressor type")
+

@@ -1,5 +1,7 @@
 from pyspark.ml import Pipeline
 from pyspark.ml.feature import Word2Vec, HashingTF, IDF
+from gensim.models import Word2Vec
+from gensim.models.word2vec import LineSentence
 
 class FeatureFactory(object):
 	def __init__(self):
@@ -13,8 +15,10 @@ class FeatureFactory(object):
 			idf = IDF(inputCol="rawFeatures", outputCol=output_col)
 			pipeline = Pipeline(stage=[hashingTF, idf])
 			return pipeline
-        elif type == "StringIndexer":
-            return
+		elif type == "StringIndexer":
+			return
 		else:
 			print("Invalid feature type!")
 
+if __name__ == "__main__":
+    pass
