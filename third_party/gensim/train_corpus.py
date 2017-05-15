@@ -24,6 +24,17 @@ class MMCorpus(object):
 		for line in open(self._corpus_path):
 			yield self._dict.doc2bow(line.split(" "))
 
+	def doc_bow(self):
+		for line in open(self._corpus_path):
+			return self._dict.doc2bow(line.split(" "))
+
+
+def train_corpus(input_corpus, input_dict, output_corpus):
+	corpus = MMCorpus(input_corpus, input_dict)
+	logging.info(corpus)
+	gensim.corpora.MmCorpus.serialize(output_corpus, corpus)
+
+
 if __name__ == "__main__":
 	logging.basicConfig(level=logging.INFO)
 
@@ -31,6 +42,4 @@ if __name__ == "__main__":
 		logging.error("train_corpus $input_corpus $input_dict $output_corpus")
 		sys.exit()
 
-	corpus = MMCorpus(sys.argv[1], sys.argv[2])
-	logging.info(corpus)
-	gensim.corpora.MmCorpus.serialize(sys.argv[3], corpus)
+	train_corpus(sys.argv[1], sys.argv[2], sys.argv[3])

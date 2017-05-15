@@ -12,7 +12,7 @@ if __name__ == '__main__':
 	conf = SparkConf().setMaster('local')
 	conf.set("spark.sql.warehouse.dir", "E:/spark-warehouse/")
 	spark = SparkSession.builder.appName('2.0 ml demo').config(conf=conf).getOrCreate()
-	df = spark.read.csv(r'D:\dev\project\ml-20m\ml-20m\ratings.csv', header=True, inferSchema=True)
+	df = spark.read.csv(r'/Users/joshualiu/dev/data/ml-20m/ratings.csv', header=True, inferSchema=True)
 	(training, test) = df.randomSplit([0.8, 0.2])
 	als = ALS(maxIter=5, regParam=0.01, userCol="userId", itemCol="movieId", ratingCol="rating")
 	pipeline = Pipeline(stages=[als])

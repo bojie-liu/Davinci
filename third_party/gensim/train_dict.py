@@ -5,13 +5,18 @@
 Description:
 """
 
+# from __future__ import absolute_import
+
 __author__ = "joshliu"
 
 import sys
 from collections import defaultdict
+# from utils import log
 import logging
 import gensim.corpora
 
+
+# log.get_logger('root')
 
 def train_dict(corpus_path, dict_path):
 	_stopword_path = ""
@@ -19,22 +24,28 @@ def train_dict(corpus_path, dict_path):
 		texts = f.read().split("\n")
 
 		stopwords = []
-		with open(_stopword_path) as stop_f:
-			stopwords = stop_f.read().split("\n")
+		# with open(_stopword_path) as stop_f:
+		# 	stopwords = stop_f.read().split("\n")
 
 		logging.info("Has %d stopwords. " % (len(stopwords)))
 
 		frequency = defaultdict(int)
-		for text in texts:
-			for token in text.split():
-				frequency[token] += 1
+		# for text in texts:
+		# 	for token in text.split():
+		# 		frequency[token] += 1
 
 		logging.info("Preparing corpus")
-		corpus = [[token for token in text if frequency[token] > 3 and token not in stopwords] for text in texts]
+		corpus = [text.split() for text in texts]
 		logging.info("Building dictionary")
 		dictionary = gensim.corpora.Dictionary(corpus)
 		dictionary.save(dict_path)
 		print(dictionary)
+
+
+def test_dict(dict_path):
+	diction = gensim.corpora.Dictionary.load(dict_path)
+	test = diction.items()
+	pass
 
 if __name__ == "__main__":
 	logging.basicConfig(level=logging.INFO)
@@ -44,3 +55,4 @@ if __name__ == "__main__":
 		sys.exit(0)
 
 	train_dict(sys.argv[1], sys.argv[2])
+	# test_dict(sys.argv[2])
