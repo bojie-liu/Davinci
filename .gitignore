@@ -1,4 +1,6 @@
 *.sublime-workspace
 *.pyc
+/.idea
+/conf/
 /*.sublime-project
 /*.sublime-workspace
